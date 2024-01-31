@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(session({
   resave : false,
   saveUninitialized:false,
-  secret: "Maria"
+  secret: "Bab"
 }));
 
 app.use(logger('dev'));
