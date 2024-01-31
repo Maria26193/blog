@@ -19,11 +19,11 @@ router.get('/sess',function(req,res){
 // For Add User
 router.get('/add', async function(req, res, next) {
   const addUser = await userModel.create({
-    name : "Razia",
+    name : "Bab",
     age:"32",
-    fatherName: "Badrul Islam",
-    motherName: "Shamima Khatoon",
-    blogNote: "This is Comment From Sania"
+    fatherName: "Bachlor",
+    motherName: "Bena",
+    blogNote: "This is Comment From Bab"
   })
 
   console.log(req.session);
@@ -41,12 +41,12 @@ router.get('/list', async function(req, res, next) {
 });
 // Fetch single  Data
 router.get('/one-list', async function(req, res, next) {
-  const oneUser = await userModel.findOne({name:"Sania"})
+  const oneUser = await userModel.findOne({name:"Bab"})
   res.send(oneUser);
 });
 // Delete single  Data
 router.get('/delete', async function(req, res, next) {
-  const oneUserDel = await userModel.findOneAndDelete({name:"Maria"})
+  const oneUserDel = await userModel.findOneAndDelete({name:"Bab"})
   res.send(oneUserDel);
 });
 
